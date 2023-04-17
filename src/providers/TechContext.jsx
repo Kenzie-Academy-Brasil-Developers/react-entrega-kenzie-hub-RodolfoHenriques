@@ -8,6 +8,8 @@ export const TechProvider = ({ children }) => {
     const { user } = useContext(UserContext)
     const [techList, setTechList] = useState([user.techs])
 
+    //teste
+
     const addTech = async (formData, setLoading) => {
         const token = localStorage.getItem("@TOKEN")
         try {
