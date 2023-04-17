@@ -1,6 +1,5 @@
 import { useContext } from "react"
 import { Navigate, Outlet } from "react-router-dom"
-import { TechProvider } from "../../providers/TechContext"
 import { UserContext } from "../../providers/userContext"
 
 export const ProtectedRoutes = () => {
@@ -19,8 +18,8 @@ export const ProtectedRoutes = () => {
     }
 
     return (
-        <TechProvider>
-            <Outlet />
-        </TechProvider>
+
+        <Outlet />
+
     )
 }
