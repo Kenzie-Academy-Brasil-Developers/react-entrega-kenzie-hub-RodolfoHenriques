@@ -5,7 +5,7 @@ import { registerFormSchema } from "./registerFormSchema"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useContext, useState } from "react"
 import { StyledRegisterForm } from "./styled"
-import { UserContext } from "../../providers/userContext"
+import { ProfileContext } from "../../providers/ProfileContext"
 import { useNavigate } from "react-router-dom"
 
 export const RegisterForm = () => {
@@ -14,7 +14,7 @@ export const RegisterForm = () => {
         resolver: zodResolver(registerFormSchema)
     })
 
-    const { userRegister } = useContext(UserContext)
+    const { userRegister } = useContext(ProfileContext)
 
     const navigate = useNavigate()
 

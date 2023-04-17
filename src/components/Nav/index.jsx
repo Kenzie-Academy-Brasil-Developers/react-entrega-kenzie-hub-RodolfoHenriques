@@ -3,10 +3,10 @@ import { Link } from "react-router-dom"
 import { StyledButtonNav, StyledNav } from "./styled"
 import { toast } from "react-toastify"
 import { useContext } from "react"
-import { UserContext } from "../../providers/userContext"
+import { ProfileContext } from "../../providers/ProfileContext"
 
 export const Nav = ({ button }) => {
-    const { userLogout, user } = useContext(UserContext)
+    const { userLogout, user } = useContext(ProfileContext)
 
     return (
         <>

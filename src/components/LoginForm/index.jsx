@@ -5,10 +5,10 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { Link } from "react-router-dom"
 import { StyledLoginForm } from "./styled"
 import { useContext, useState } from "react"
-import { UserContext } from "../../providers/userContext"
+import { ProfileContext } from "../../providers/ProfileContext"
 
 export const LoginForm = () => {
-    const { userLogin } = useContext(UserContext)
+    const { userLogin } = useContext(ProfileContext)
     const [loading, setLoading] = useState(false)
     const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: zodResolver(loginFormSchema)

@@ -1,13 +1,11 @@
 import { useContext, useState } from "react"
-import { TechContext } from "../../providers/TechContext"
-import { UserContext } from "../../providers/userContext"
+import { ProfileContext } from "../../providers/ProfileContext"
 import { CreateTechModal } from "./CreateTechModal"
 import { StyledTechList, StyledTechTitle } from "./styled"
 import { TechCard } from "./TechCard"
 
 export const TechList = () => {
-    const { user } = useContext(UserContext)
-    const { techList } = useContext(TechContext)
+    const { user } = useContext(ProfileContext)
     const [ ModalOpen, setModalOpen] = useState(false)
 
     return (

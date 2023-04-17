@@ -1,9 +1,9 @@
 import { useContext } from "react"
-import { UserContext } from "../../providers/userContext"
+import { ProfileContext } from "../../providers/ProfileContext"
 import { StyledHeader } from "./styled"
 
 export const Header = () => {
-    const { user } = useContext(UserContext)
+    const { user } = useContext(ProfileContext)
     return (
         <StyledHeader>
                 <h1>Olá, {user.name}</h1>
