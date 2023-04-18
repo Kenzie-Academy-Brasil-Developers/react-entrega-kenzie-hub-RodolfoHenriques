@@ -1,4 +1,3 @@
-import { toast } from "react-toastify"
 import { StyledInput } from "./styled"
 
 export const Input = ({ type, id , placeholder,  label, register, error }) => {

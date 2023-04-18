@@ -1,14 +1,12 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import { api } from "../services/api";
-import { UserContext } from "./userContext";
+import { createContext, useContext, useEffect, useState } from "react"
+import { api } from "../services/api"
+import { UserContext } from "./userContext"
 
 export const TechContext = createContext({})
 
 export const TechProvider = ({ children }) => {
     const { user } = useContext(UserContext)
     const [techList, setTechList] = useState([user.techs])
-
-    //teste
 
     const addTech = async (formData, setLoading) => {
         const token = localStorage.getItem("@TOKEN")

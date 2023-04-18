@@ -5,7 +5,6 @@ import { ProfileContext } from "../../providers/ProfileContext"
 
 export const ProtectedRoutes = () => {
     const { user, loading } = useContext(ProfileContext)
-
     if (loading) {
         return (
             <div className="loading">

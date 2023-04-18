@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const StyledLoginForm = styled.form`
     border-radius: 4px;
