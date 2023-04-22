@@ -7,6 +7,7 @@ export const StyledRegisterForm = styled.form`
 
     padding: 42px 22px;
     gap: 22px;
+    margin-top: 30px;
 
     background-color: var(--grey-3);
 
@@ -62,5 +63,9 @@ export const StyledRegisterForm = styled.form`
 
     a:hover{
         background-color: var(--grey-2);
+    }
+
+    @media( min-width: 800px){
+        margin-top: 40px;
     }
 `

@@ -1,10 +1,11 @@
 import { StyledTechCard } from "./styled"
 
-export const TechCard = () => {
-    return(
+export const TechCard = ({ tech }) => {
+
+    return (
         <StyledTechCard>
-            <span>Tecnologia</span>
-            <p>Nível</p>
+            <span>{tech.title}</span>
+            <p>{tech.status}</p>
         </StyledTechCard>
     )
 }

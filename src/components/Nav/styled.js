@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const StyledNav = styled.nav`
     display: flex;
     justify-content: center;
-    padding-top: 80px;
+    padding-top: 45px;
     margin-bottom: 20px;
     
     @media(min-width: 800px){
@@ -15,12 +15,7 @@ export const StyledButtonNav = styled.nav`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 80px;
-    margin-bottom: 20px;
-
-    @media(min-width: 800px){
-        margin-bottom: 36px;
-    }
+    padding-top: 45px;    
 
     a{
         text-align: center;

@@ -1,14 +1,15 @@
-import { createContext, useContext, useEffect, useState } from "react"
+import { createContext, useContext, useState } from "react"
 import { api } from "../services/api"
-import { UserContext } from "./userContext"
+import { ProfileContext } from "./ProfileContext"
+import { toast } from "react-toastify"
 
 export const TechContext = createContext({})
 
 export const TechProvider = ({ children }) => {
-    const { user } = useContext(UserContext)
-    const [techList, setTechList] = useState([user.techs])
+    const { user } = useContext(ProfileContext)
+    const [techList, setTechList] = useState(user.techs)
 
-    const addTech = async (formData, setLoading) => {
+    const addTech = async (formData, setLoading, callback) => {
         const token = localStorage.getItem("@TOKEN")
         try {
             setLoading(true)
@@ -17,17 +18,18 @@ export const TechProvider = ({ children }) => {
                     Authorization: `Bearer ${token}`
                 }
             })
-            setTechList([...techList, data])
+            const newTechList = [...techList, data]
+            toast.success("Tecnologia cadastrada com sucesso!")
+            setTechList(newTechList)
+            if (callback) {
+                await callback();
+            }
         } catch (error) {
-            console.log(error)
+            toast.error("Ops! Algo deu errado!")
         } finally {
             setLoading(false)
         }
     }
-
-    useEffect(() => {
-
-    }, [])
 
     return (
         <TechContext.Provider value={{ techList, setTechList, addTech }}>

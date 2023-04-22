@@ -1,6 +1,10 @@
 import styled from "styled-components"
 
 export const StyledCreateTech = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    
     .modalBoxContainer{
         position: absolute;
         top: 0;

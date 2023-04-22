@@ -1,5 +1,6 @@
 import { useContext, useState } from "react"
 import { ProfileContext } from "../../providers/ProfileContext"
+import { TechContext } from "../../providers/TechContext"
 import { CreateTechModal } from "./CreateTechModal"
 import { StyledTechList, StyledTechTitle } from "./styled"
 import { TechCard } from "./TechCard"
@@ -7,6 +8,7 @@ import { TechCard } from "./TechCard"
 export const TechList = () => {
     const { user } = useContext(ProfileContext)
     const [ ModalOpen, setModalOpen] = useState(false)
+    const { techList } = useContext(TechContext)
 
     return (
         <>
@@ -18,11 +20,9 @@ export const TechList = () => {
                ) : null}
             </StyledTechTitle>
             <StyledTechList>
-                {user.techs.length === 0 ? (<p className="emptyTechs">O usuário ainda não possui tecnologias cadastradas...</p>) : null}
-                {user.techs.map((tech) => {
-                    return <TechCard key={tech.title} tech={tech}/>
-                })}
-                <TechCard/>
+                {user.techs.length === 0 ? (<p className="emptyTechs">O usuário ainda não possui tecnologias cadastradas...</p>) : (techList.map((tech) => {
+                    return <TechCard key={tech.id} tech={tech}/>
+                }))}
             </StyledTechList>
         </>
     )

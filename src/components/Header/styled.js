@@ -10,6 +10,7 @@ export const StyledHeader = styled.header`
     border-bottom: 2px solid var(--grey-3);
     align-self: center;
     padding: 45px 0;
+    margin-top: 24px;
     
     h1{
         color: var(--grey-0);
@@ -28,5 +29,6 @@ export const StyledHeader = styled.header`
         align-items: center;
         justify-content: space-between;
         gap: 0;
+        margin-top: 20px;
     }
 `
