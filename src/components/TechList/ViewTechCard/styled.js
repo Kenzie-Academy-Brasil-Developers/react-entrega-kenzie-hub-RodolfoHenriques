@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const StyledCreateTech = styled.div`
+export const StyledViewTechCard = styled.div`
     position: absolute;
     top: 0;
     left: 0;
@@ -43,12 +43,13 @@ export const StyledCreateTech = styled.div`
     
     .closeButton{
         position: absolute;
-        top: 8px;
-        right: 12px;
+        top: 14px;
+        right: 20px;
         background-color: var(--grey-2);
         font-weight: 600;
         font-size: 0.9rem;
         color: var(--grey-0);
+        border: none;
     }
 
     .controlsDiv{
@@ -66,13 +67,29 @@ export const StyledCreateTech = styled.div`
         position: relative;
     }
 
-    .registerTech {
-        width: 100%;
+    .buttonsDiv{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .changeTech {
         height: auto;
         background-color: var(--color-primary);
         border-radius: 4px;
         border: none;
-        padding: 12px 0;
+        padding: 12px 36px;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #FFFFFF;
+    }
+
+    .deleteTech {
+        height: auto;
+        background-color: var(--grey-1);
+        border-radius: 4px;
+        border: none;
+        padding: 12px 26px;
         font-weight: 500;
         font-size: 1rem;
         color: #FFFFFF;
